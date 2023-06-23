@@ -1,10 +1,18 @@
 import Link from "next/link";
-import { FaTwitter, FaGithub, FaLaptop } from "react-icons/fa";
+import { FaTwitter, FaGithub } from "react-icons/fa";
+import Search from "./Search";
 
 export default function Navbar() {
   return (
     <nav className="bg-slate-600 p-4 sticky top-0 drop-shadow-xl z-10">
-      <div className="prose prose-xl mx-auto flex justify-between flex-col sm:flex-row">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginLeft: 20,
+          marginRight: 20,
+        }}
+      >
         <h1 className="text-3xl font-bold text-white grid">
           <Link
             href={"/"}
@@ -26,6 +34,7 @@ export default function Navbar() {
           >
             <FaTwitter />
           </Link>
+          <Search />
         </div>
       </div>
     </nav>
